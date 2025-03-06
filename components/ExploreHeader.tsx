@@ -66,9 +66,9 @@ const ExploreHeader = ({ onCategoryChanged }: Props) => {
   };
 
   return (
-    <SafeAreaView className=" bg-white flex-1">
-      <View className="justify-center h-[140px] elevation-lg ">
-        <View className=" flex-row items-center justify-between px-6 pb-4">
+    <SafeAreaView className=" flex-1">
+      <View className=" justify-center h-[140px] elevation-lg ">
+        <View className="  flex-row items-center justify-between px-6 pb-4">
           <Link href={"/(modals)/booking"} asChild>
             <TouchableOpacity className="flex-row gap-3 p-3 items-center border border-[rgb(221,219,219)] rounded-full bg-white elevation-md shadow  ">
               <Ionicons name="search" size={24} />
