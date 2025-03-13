@@ -15,6 +15,7 @@ import Animated, {
   FadeInRight,
   FadeOutLeft,
 } from "react-native-reanimated";
+import { Listing } from "@/interfaces/listing";
 
 interface Props {
   listings: any[];
@@ -34,7 +35,7 @@ const Listings = ({ listings: items, category }: Props) => {
     }, 200);
   }, [category]);
 
-  const renderRow: ListRenderItem<any> = ({ item }) => (
+  const renderRow: ListRenderItem<Listing> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
       <TouchableOpacity>
         <View className=" p-4 gap-2 my-4">
@@ -47,20 +48,20 @@ const Listings = ({ listings: items, category }: Props) => {
           </TouchableOpacity>
 
           <View className=" flex-row justify-between">
-            <Text>{item.name}</Text>
+            <Text className=" font-Montserrat-semibold">{item.name}</Text>
             <View className=" flex-row gap-2">
               <Ionicons name="star" size={16} />
-              <Text className=" font-semibold">
+              <Text className="font-Montserrat-semibold ">
                 {item.review_scores_rating / 20}
               </Text>
             </View>
           </View>
 
-          <Text>{item.room_type}</Text>
+          <Text className="">{item.room_type}</Text>
 
-          <View className=" flex-row gap-1">
-            <Text>$ {item.price}</Text>
-            <Text>night</Text>
+          <View className=" flex-row gap-1 ">
+            <Text className=" font-Montserrat-regular">$ {item.price}</Text>
+            <Text className=" font-Montserrat-regular">night</Text>
           </View>
         </View>
       </TouchableOpacity>

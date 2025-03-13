@@ -33,6 +33,18 @@
           "backgroundColor": "#ffffff"
         }
       ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "src/assets/fonts/NotoSans-Bold.ttf",
+            "src/assets/fonts/NotoSans-Medium.ttf",
+            "src/assets/fonts/NotoSans-Light.ttf",
+            "src/assets/fonts/NotoSans-Regular.ttf",
+            "src/assets/fonts/NotoSans-SemiBold.ttf"
+          ]
+        }
+      ],
       "expo-secure-store"
     ],
     "experiments": {

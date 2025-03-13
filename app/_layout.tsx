@@ -10,9 +10,9 @@ export default function RootLayout() {
   const router = useRouter();
 
   const [loaded, error] = useFonts({
-    mon: require("../assets/fonts/Montserrat-Regular.ttf"),
-    "mon-sb": require("../assets/fonts/Montserrat-SemiBold.ttf"),
-    "mon-b": require("../assets/fonts/Montserrat-Bold.ttf"),
+    "Montserrat-Bold": require("../assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat-Regular": require("../assets/fonts/Montserrat-SemiBold.ttf"),
+    "Montserrat-SemiBold": require("../assets/fonts/Montserrat-Bold.ttf"),
   });
 
   useEffect(() => {
@@ -47,7 +47,13 @@ export default function RootLayout() {
           ),
         }}
       />
-      <Stack.Screen name="listing/[id]" options={{ headerTitle: "" }} />
+      <Stack.Screen
+        name="listing/[id]"
+        options={{
+          headerTitle: "",
+          headerTransparent: true,
+        }}
+      />
       <Stack.Screen
         name="(modals)/booking"
         options={{
