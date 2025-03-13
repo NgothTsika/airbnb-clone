@@ -4,6 +4,7 @@ import { useLocalSearchParams } from "expo-router";
 
 const Page = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
+  // const listing = (listingsData as any[]).find((item) => item.id)
   return (
     <View>
       <Text>Page</Text>
