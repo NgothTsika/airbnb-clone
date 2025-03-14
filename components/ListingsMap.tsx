@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 import MapView from "react-native-map-clustering";
 import { StyleSheet, Text, View } from "react-native";
@@ -16,7 +16,7 @@ const INITIAL_REGION = {
   longitudeDelta: 0.0421, // Adjust the delta values as needed
 };
 
-const ListingsMap = ({ listings }: Props) => {
+const ListingsMap = memo(({ listings }: Props) => {
   const router = useRouter();
 
   const onMarkerSelected = (item: ListingGeo) => {
@@ -80,7 +80,7 @@ const ListingsMap = ({ listings }: Props) => {
       </MapView>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
