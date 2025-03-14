@@ -38,8 +38,12 @@ const Listings = ({ listings: items, category }: Props) => {
   const renderRow: ListRenderItem<Listing> = ({ item }) => (
     <Link href={`/listing/${item.id}`} asChild>
       <TouchableOpacity>
-        <View className=" p-4 gap-2 my-4">
-          <Image
+        <Animated.View
+          className=" p-4 gap-2 my-4"
+          entering={FadeInRight}
+          exiting={FadeOutLeft}
+        >
+          <Animated.Image
             source={{ uri: item.medium_url }}
             className=" w-[100%] h-[300px] rounded-xl "
           />
@@ -63,7 +67,7 @@ const Listings = ({ listings: items, category }: Props) => {
             <Text className=" font-Montserrat-regular">$ {item.price}</Text>
             <Text className=" font-Montserrat-regular">night</Text>
           </View>
-        </View>
+        </Animated.View>
       </TouchableOpacity>
     </Link>
   );
