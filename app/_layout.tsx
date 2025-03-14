@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import ModalHeaderText from "@/components/ModalHeaderText";
 
 export default function RootLayout() {
   const router = useRouter();
@@ -59,6 +60,8 @@ export default function RootLayout() {
         options={{
           animation: "fade",
           presentation: "transparentModal",
+          headerTransparent: true,
+          headerTitle: () => <ModalHeaderText />,
           headerLeft: () => (
             <TouchableOpacity onPress={() => router.back()}>
               <Ionicons name="close-outline" size={28} />
