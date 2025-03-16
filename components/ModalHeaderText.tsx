@@ -3,8 +3,8 @@ import React from "react";
 
 const ModalHeaderText = () => {
   return (
-    <View>
-      <Text>ModalHeaderText</Text>
+    <View className=" flex-row justify-center">
+      <Text>GENIAL</Text>
     </View>
   );
 };
